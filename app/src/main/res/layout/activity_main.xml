@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/nama_produk"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:background="@drawable/btn_et_design"
+        style="@style/inputbox"
+        android:autofillHints=""/>
+    <EditText
+        android:id="@+id/et_stok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/stok_produk"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:background="@drawable/btn_et_design"
+        style="@style/inputbox"
+        android:autofillHints=""/>
+    <EditText
+        android:id="@+id/et_harga"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/harga_produk"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:background="@drawable/btn_et_design"
+        style="@style/inputbox"
+        android:autofillHints=""/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="15sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="@dimen/btnwidth"
+        android:layout_height="wrap_content"
+        android:text="@string/simpan"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/gray"
+        android:background="@drawable/btn_et_design" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_allitem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
