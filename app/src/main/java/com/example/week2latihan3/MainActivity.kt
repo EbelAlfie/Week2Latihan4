@@ -1,6 +1,5 @@
 package com.example.week2latihan3
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -30,7 +29,6 @@ class MainActivity: AppCompatActivity() {
         viewInteraction()
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun viewInteraction() {
         btnSubmit.setOnClickListener {
             try {
@@ -53,7 +51,7 @@ class MainActivity: AppCompatActivity() {
                                     R.string.header_stok), getString(R.string.header_harga)))
                 tvError.text = ""
                 listProduk.add(Produk(namaProduk, stokProduk, hargaProduk))
-                produkAdapter.notifyDataSetChanged()
+                produkAdapter.notifyItemChanged(produkAdapter.itemCount)
             } catch (e: Exception) {
                 Toast.makeText(this, getString(R.string.default_errormsg), Toast.LENGTH_LONG).show()
             }

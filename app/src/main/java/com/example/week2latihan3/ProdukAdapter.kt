@@ -1,6 +1,5 @@
 package com.example.week2latihan3
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +18,6 @@ class ProdukAdapter(val listProduk: MutableList<Produk>): RecyclerView.Adapter<P
         return ProdukViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.one_item, parent, false))
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ProdukViewHolder, position: Int) {
         val produk = listProduk[position]
         holder.etOutNama.text = produk.namaProduk
